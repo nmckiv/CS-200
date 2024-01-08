@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocAn Design</title>
+<!--table style-->
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #9e1b32;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: auto;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+table{
+  font-family: Times, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid Black;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  background-color: #9e1b32;
+}
+
+tr:nth-child(odd) {
+  background-color: White;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #828a8f;
+  
+}
+
+tr:hover {background-color: LightBlue;}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-below {
+  text-align: left;
+}
+
+.center-container {
+  text-align: center;
+}
+
+.center2 {
+  text-align: center; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border: 5px solid #9e1b32;
+}
+.center3 {
+  text-align: center; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+}
+
+img {
+    width: 60%;
+    height: 60%;
+}
+
+.scroll-box {
+    width: 1000px; 
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #9e1b32;
+    padding: 10px; 
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <!--Home tab-->
+    <a href="Report3.html">Project 3 - Design</a>
+    <!-- Activity diagrams by actor-->
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Sequence Diagrams
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="Support_HTMLs/VerifyUserSequence.HTML">Verify User</a>
+      <a href="Support_HTMLs/ChocAnProviderSequence.html">ChocAn Provider</a>
+      <a href="Support_HTMLs/ChocAnManagerSequence.html">ChocAn Manager</a>
+      <a href="Support_HTMLs/ChocAnOperatorSequence.html">ChocAn Operator</a>
+      <a href="Support_HTMLs/ChocAnTimerSequence.html">ChocAn Timer</a>
+    </div>
+    </div>
+    <!--Stereotype class-->
+    <a href="Support_HTMLs/Class.html">Class Diagram</a>
+    <!--Project 1-->
+    <a href="../Project_1_Requirements/Report1.html">Project 1 - Requirements</a>
+    <!--Project 2-->
+    <a href="../Project_2_Analysis/Report2.html">Project 2 - Analysis</a>
+    <!--Project 4-->
+    <a href="../Project_4_Implementation_and_Testing/Header/Report4Header.html">Project 4 - Header</a>
+    <!--Project 4-->
+    <a href="../Project_4_Implementation_and_Testing/TaskDistribution/Report4TaskDistribution.html">Project 4 - Task Distribution</a>
+  </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+</script>
+
+<h1 style="text-align:center">ChocAn Project 3 - Design</h1>
+<h2 style="text-align:center">Team 4</h2>
+
+<!--Header Table-->
+<table class = "center">
+  <caption>
+    <h2>Header Table</h2>
+  </caption>
+  <tr>
+    <th>Name</th>
+    <th>Contact Email</th>
+    <th>CWID</th>
+    <th>Hours</th>
+  </tr>
+  <tr>
+    <td>John Byrd</td>
+    <td><a href="mailto:jabyrd2@crimson.ua.edu"> jabyrd2@crimson.ua.edu</td>
+    <td>12105976</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Pearson Hunter</td>
+    <td><a href="mailto:rhhunter@crimson.ua.edu">rhhunter@crimson.ua.edu</td>
+    <td>12192300</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Girwan Dhakal</td>
+    <td><a href="mailto:gdhakal@crimson.ua.edu">gdhakal@crimson.ua.edu</td>
+    <td>12274204</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Benjamin Haas*</td>
+    <td><a href="mailto:bmhaas@crimson.ua.edu">bmhaas@crimson.ua.edu</td>
+    <td>11765316</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Nolan McKivergan</td>
+    <td><a href="mailto:npmckivergan@crimson.ua.edu">npmckivergan@crimson.ua.edu</td>
+    <td>12285017</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>Rowan Romanauskas</td>
+    <td><a href="mailto:raromanauskas@crimson.ua.edu">raromanauskas@crimson.ua.edu</td>
+    <td>12275563</td>
+    <td>6</td>
+  </tr>
+</table>
+<p style="text-align:center">* - Submitter for Project 3 - Design</p>
+<hr color= White>
+<div>
+
+</div>
+<hr color= White>
+
+<!--Task Distribution Table-->
+<table class="center">
+  <caption>
+    <h2>Task Distribution Table</h2>
+  </caption>
+  <tr>
+    <th>Name</th>
+    <th>Task</th>
+    <th>Percentage</th>
+  </tr>
+  <tr>
+    <td>John Byrd</td>
+    <td>Bill ChocAn Sequence Diagram, Verify User Sequence Diagram</td>
+    <td>16.6%</td>
+  </tr>
+  <tr>
+    <td>Pearson Hunter</td>
+    <td>Class Diagram</td>
+    <td>16.6%</td>
+  </tr>
+  <tr>
+    <td>Girwan Dhakal</td>
+    <td>Paragraph Write up </td>
+    <td>16.6%</td>
+  </tr>
+  <tr>
+    <td>Benjamin Haas</td>
+    <td>Final Report, Submitter, Request Provider Directory Sequence Diagram</td>
+    <td>16.6%</td>
+  </tr>
+  <tr>
+    <td>Nolan McKivergan</td>
+    <td>Modify Member Sequence Diagram, Modify Provider Sequence Diagram</td>
+    <td>16.6%</td>
+  </tr>
+  <tr>
+    <td>Rowan Romanauskas</td>
+    <td>Generate Individual Report Sequence Diagram, Run Main Accouting Procedure Sequence Diagram</td>
+    <td>16.6%</td>
+  </tr>
+</table>
+<hr color= White>
+<hr color= White>
+<hr color= White>
+<hr color= White>
+<div class = "center3">
+  <div class = "scroll-box">
+    <p style = "text-align:left">
+      Coupling refers to what degree the modules of our system are interdependent on each other.
+We can look at our class diagrams to see how much of an impact these two concepts have. We
+don't see many bidirectional associations between classes which would otherwise suggest that
+classes have multiple instances to another. This would mean that changes in a class would
+affect changes in another class it is associated with. A system with high cohesion would have
+components that have methods and attributes that serve the purpose of the class. For example,
+in the “ProviderDirectory” entity class, we see the attributes and methods are closely related to
+the class responsibility that is to display the provider directory. A system with high cohesion and
+low coupling like ours, would make maintainability and modularity of the system easier over the
+lifespan of the system.</p>
+<p style = "text-align:left">
+For the architecture of our project, we feel that a data Abstraction and Object-Oriented
+Organization style would be most suited. This architectural style aligns with the object oriented
+style of Java and it aligns with our use of abstraction as well. In our project, we have made sure
+to encapsulate a lot of the complex details of our project in classes so that the end-user does
+not have to deal with the complexities of the system. We have created classes that facilitate the
+use cases of our project such as the billing process for which the user(provider) only has to fill
+out a form and does not have to deal with the calculation of etf data, total amount payable and
+so on. In addition, the principles of inheritance and polymorphism allows us to simplify the
+development process as we are able to reuse code and maintain consistency such as how we
+have done with the report classes.
+    </p>
+  </div>
+</div>
+<hr color = White>
+<hr color = White>
+</p>
+  	<div class = "center2">
+  	 <img src = "./HTML_PNGs/Bitbucket1.png">
+  	</div>
+ </p>
+ </p>
+  	<div class = "center2">
+  	 <img src = "./HTML_PNGs/Bitbucket2.png">
+  	</div>

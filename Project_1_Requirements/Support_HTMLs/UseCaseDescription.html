@@ -1,0 +1,766 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocAn Project 1</title>
+<!--table style-->
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #9e1b32;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: auto;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+table{
+  font-family: Times, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid Black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: LightGrey;
+}
+tr:nth-child(even) {
+  background-color: Azure;
+}
+tr:hover {background-color: LightBlue;}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <!--Home tab-->
+    <a href="../Report1.html">Project 1 - Requirements</a>
+    <!--Glossary Tab-->
+    <a href="Glossary.html">Glossary</a>
+    <!-- Use Case Tab-->
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Use Cases
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="UseCaseDiagram.html">Use Case Diagram</a>
+        <a href="UseCaseDescription.html">Use Case Description</a>
+    </div>
+    </div>
+    <!--Story Selection tab-->
+    <a href="StorySelectionMatrix.html">Story Selection Matrix</a> 
+    <!-- user story tab-->
+    <a href="GenericSecurityUserStories.html">Generic Security User Stories</a>
+    <!--Project 2-->
+    <a href="../../Project 2 Analysis/Report2.html">Project 2 - Analysis</a>
+    <!--Project 3-->
+    <a href="../../Project 3 Design/Report3.html">Project 3 - Design</a>
+    <!--Project 4-->
+    <a href="../../Project 4 Implementation and Testing/Report4.html">Project 4 - Implementation and Testing</a>
+
+  </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+</script>
+
+<h1 style="text-align:center">ChocAn Project 1 - Requirements</h1>
+<h2 style="text-align:center">Use Case Descriptions</h2>
+<hr color="#9e1b32">
+
+<!--Use Case 1-->
+<p>
+  <caption>
+    <h3> Request Provider Directory</h3>
+  </caption>    
+  <b>Use Case:</b> Request Provider Directory<br>
+  <b>Context:</b> The provider requests the provider directory to be sent as an attachment to their e-mail inbox<br>
+  <b>Actors:</b> Provider<br>
+  <b>Main Success Scenario:</b><br>
+  <span style="margin-left:12px">1. The provider requests the provider directory.<br>
+  <span style="margin-left:12px">2. The provider enters the e-mail address wwhere they want the directory sent.<br>
+  <span style="margin-left:12px">3. The provider directory is sent to the given e-mail address as an attachment.<br>
+  <span style="margin-left:12px">4. Use case is finished<br>
+  <b>Extensions: </b> N/A <br>
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 2-->
+<p>
+  <caption>
+    <h3> Bill ChocAn</h3>
+  </caption>
+  <b>Use Case:</b> Bill ChocAn<br>
+  <b>Context:</b> Provider is recording a service and billing ChocAn the proper amount<br>
+  <b>Actors:</b> Provider<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1. Provider enters login information<br>
+  <span style="margin-left:12px">2. Provider is verified through the ChocAn database<br>
+  <span style="margin-left:12px">3. Provider enters the member info to have it verified<br>
+  <span style="margin-left:12px">4. Provider records that the desired service was completed<br>
+  <span style="margin-left:24px">4.1. Optionally the Provider adds comments to the record<br>
+  <span style="margin-left:12px">5. The provider verifies that the fee for the service is correct<br>
+  <span style="margin-left:12px">6. The provider fills out their own personal record for data keeping purposes<br>
+  <span style="margin-left:12px">7. Use case is finished<br>
+  <b>Extensions:</b><br>
+  <span style="margin-left:12px">1.a. Invalid provider login<br>
+  <span style="margin-left:24px">1.a.1. System notifies the provider<br>
+  <span style="margin-left:24px">1.a.2. Use case returns to step 1<br>
+  <span style="margin-left:36px">1.a.2.a. After 3 invalid attempts, option to contact customer service is offered then proceed to step 7<br>
+  <span style="margin-left:12px">3.a. Invalid member information<br>
+  <span style="margin-left:12px">3.a.1 Use case returns to step 3<br>
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 3-->
+<p>
+  <caption>
+    <h3> Verify User</h3>
+  </caption>
+  <b>Use Case:</b> Verify User<br>
+  <b>Context:</b> A user is verified through the ChocAn System<br>
+  <b>Actors:</b> Provider, Manager, ChocAn Operator<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1. Provider logins in to provider system<br>
+  <span style="margin-left:12px">2. Inputs user info<br>
+  <span style="margin-left:12px">3. User is verified within the system<br>
+  <span style="margin-left:12px">4. <b>Validated</b> appears on the one-line display<br>
+  <span style="margin-left:12px">5. Use Case is finished<br>
+  <b>Extensions: </b><br>
+  <span style="margin-left:12px">1.a. Manger logins in to manager system<br>
+  <span style="margin-left:12px">1.b. ChocAn Operator logins in to operator system<br>
+  <span style="margin-left:12px">4`.a. <b>Invalid</b> appears on the one-line display<br>  
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 4-->
+<p>
+  <caption>
+    <h3> Validate Member</h3>
+  </caption>
+  <b>Use Case:</b> Validate Member<br>
+  <b>Context:</b> Provider validates a member's information to confirm they are part of ChocAn<br>
+  <b>Actors:</b> Provider<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1.	Software prompts provider to enter member information<br>
+  <span style="margin-left:12px">2.	Provider enters member's info or swipes the member's card<br>
+  <span style="margin-left:12px">3.	ChocAn returns whether or not the member is a part of ChocAn<br>
+  <span style="margin-left:12px">4. Use case is finished<br>
+  <b>Extensions: </b> N/A <br>
+</p>
+
+<hr color="#9e1b32" >
+
+<!--Use Case 5-->
+<p>
+  <caption>
+    <h3> Run Main Accounting Procedure</h3>
+  </caption>
+  <b>Use Case:</b> Run Main Accounting Procedure<br>
+  <b>Context:</b> The timer is automated to make and distribute reports on the end of Friday at midnight that detail the weeks activity<br>
+  <b>Actors:</b> Timer<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1. The timer is prompted when it becomes Midnight on Friday<br>
+  <span style="margin-left:12px">2. The reports are created<br>
+  <span style="margin-left:12px">3. The reports are sent out as email attachments<br>
+  <span style="margin-left:12px">4. Use case is finished<br>
+  <b>Extensions: </b><br>
+  <span style="margin-left:12px">2.a. Member report<br>
+  <span style="margin-left:24px">2.a.1. The system will look up each member who used a ChocAn provider during the last week<br>
+  <span style="margin-left:24px">2.a.2. For each member the system will access the member's name, street address, cirt, state, ZIP code, and their member number. The system will also find what services
+    each member was provided during the week and record the date of service, provider name, and service name<br>
+  <span style="margin-left:24px">2.a.3. Use case progresses to step 3<br>
+  <span style="margin-left:12px">2.b. Provider report<br>
+  <span style="margin-left:24px">2.b.1. The system looks up each provider who has billed ChocAn during the previous week<br>
+  <span style="margin-left:24px">2.b.2. For each provider who billed ChocAn, the system locates the provider's name, number, street address, city, state, and ZIP code. Then, for each service provided
+    the system will look up the date of service, the date and time the record of service was recieved by ChocAn, member name,
+  <span style="margin-left:64px"> member number, service code, and the fee to be paid<br>
+  <span style="margin-left:24px">2.b.3. The system totals the number of consultations for each provider during the week andthe total fee that needs to be paid to the provider (up to $99,999,999)<br>
+  <span style="margin-left:24px">2.b.4. Use case progresses to step 3<br>
+  <span style="margin-left:12px">2.c. Manager report<br>
+  <span style="margin-left:24px">2.c.1. The system looks up what providers have been used for the week<br>
+  <span style="margin-left:24px">2.c.2. For each provider, the system will find how many times each provider was used and the total fees owed to the provider<br>
+  <span style="margin-left:24px">2.c.3 The system records the total number of providers and the total number of consultations with members during that week<br>
+  <span style="margin-left:24px">2.c.4. Use case progresses to step 3<br>
+  <span style="margin-left:12px">2.d. EFT report<br>
+  <span style="margin-left:24px">2.d.1. A record of EFT data is written to a disk<br>
+  <span style="margin-left:24px">2.d.2 Use case progresses to step 3<br>
+
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 6-->
+<p>
+  <caption>
+    <h3> Modify Provider</h3>
+  </caption>
+  <b>Use Case:</b> Modify Provider<br>
+  <b>Context:</b> ChocAn Operator edits ChocAn provider status<br>
+  <b>Actors:</b> ChocAn Operator<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px"> 1. Operator logs into system<br>
+  <span style="margin-left:12px"> 2. Operator is shown Operator menu<br>
+  <span style="margin-left:12px"> 3. Operator selects to view records updated by ACME<br>
+  <span style="margin-left:12px"> 4. Operator edits provider database<br>
+  <span style="margin-left:12px"> 5. Use case is finished<br> 
+  <b>Extensions: </b> <br>
+  <span style="margin-left:12px">1.a. Invalid Operator Credentials<br>
+  <span style="margin-left:24px">1.a.1. System notifies user<br>
+  <span style="margin-left:24px">1.a.2. Use case returns to step 1<br>
+  <span style="margin-left:24px">1.a.3. After 5 failed attempts, use case progresses to step 6<br>
+  <span style="margin-left:12px">4.a. Operator adds a new provider<br>
+  <span style="margin-left:24px">4.a.1. Operator selects new provider option<br>
+  <span style="margin-left:24px">4.a.2. Operator inputs new provider's information to ChocAn database<br>
+  <span style="margin-left:24px">4.a.3 New provider is assigned an ID<br>
+  <span style="margin-left:24px">4.a.4 New provider account is created<br>
+  <span style="margin-left:24px">4.a.5 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.b. Operator removes a provider<br>
+  <span style="margin-left:24px">4.b.1. Operator selects remove provider option<br>
+  <span style="margin-left:24px">4.b.2. Operator deletes provider account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.c. Operator updates provider information<br>
+  <span style="margin-left:24px">4.c.1. Operator selects update provider option<br>
+  <span style="margin-left:24px">4.c.2. Operator updates provider account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+</p>
+<hr color="#9e1b32">
+
+<!--Use Case 7-->
+<p>
+  <caption>
+    <h3> Modify Member</h3>
+  </caption>
+  <b>Use Case:</b> Modify Member<br>
+  <b>Context:</b> ChocAn Operator edits ChocAn member status<br>
+  <b>Actors:</b> ChocAn Operator<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px"> 1. Operator logs into system<br>
+  <span style="margin-left:12px"> 2. Operator is shown Operator menu<br>
+  <span style="margin-left:12px"> 3. Operator selects to view records updated by ACME<br>
+  <span style="margin-left:12px"> 4. Operator edits member database<br>
+  <span style="margin-left:12px"> 5. Use case is finished<br> 
+  <b>Extensions: </b> <br>
+  <span style="margin-left:12px">1.a. Invalid Operator Credentials<br>
+  <span style="margin-left:24px">1.a.1. System notifies user<br>
+  <span style="margin-left:24px">1.a.2. Use case returns to step 1<br>
+  <span style="margin-left:24px">1.a.3. After 3 failed attempts, use case progresses to step 5<br>
+  <span style="margin-left:12px">4.a. Operator adds a new member<br>
+  <span style="margin-left:24px">4.a.1. Operator selects new member option<br>
+  <span style="margin-left:24px">4.a.2. Operator inputs new member information to ChocAn database<br>
+  <span style="margin-left:24px">4.a.3 New member is assigned an ID<br>
+  <span style="margin-left:24px">4.a.4 New member account is created<br>
+  <span style="margin-left:24px">4.a.5 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.b. Operator removes a member<br>
+  <span style="margin-left:24px">4.b.1. Operator selects remove member option<br>
+  <span style="margin-left:24px">4.b.2. Operator deletes member account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.c. Operator updates member information<br>
+  <span style="margin-left:24px">4.c.1. Operator selects update member option<br>
+  <span style="margin-left:24px">4.c.2. Operator updates member account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+</p>
+<hr color="#9e1b32">
+
+<!--Use Case 8-->
+<p>
+  <caption>
+    <h3> Generate Individual Report</h3>
+  </caption>
+  <b>Use Case:</b> Generate Individual Report<br>
+  <b>Context:</b> At any time a manager can request an individual report of a service that was completed<br>
+  <b>Actors:</b> Manager<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px"> 1. Manager logs into system<br>
+  <span style="margin-left:12px"> 2. Manager is shown report request menu<br>
+  <span style="margin-left:12px"> 3. Database fetches report and returns it to the manager<br>
+  <span style="margin-left:12px"> 4. Use case is finished<br>
+  <b>Extensions: </b> <br>
+  <span style="margin-left:12px">1.a. Invalid Manager Credentials<br>
+  <span style="margin-left:24px">1.a.1. System notifies user<br>
+  <span style="margin-left:24px">1.a.2 Use case return to step 1<br>
+  <span style="margin-left:24px">1.a.3 After 3 failed attemps, use case progresses to step 4<br>
+  <span style="margin-left:12px">3.a. Manager requests a member report<br>
+  <span style="margin-left:24px">3.a.1. Manager selects the desired member's report<br>
+  <span style="margin-left:24px">3.a.2. Member report is returned to the manager<br>  
+  <span style="margin-left:24px">3.a.3. Use case progresses to step 4<br>
+  <span style="margin-left:12px">3.b. Manager requests a manager report<br>
+  <span style="margin-left:24px">3.b.1. Manager selects the desired manager's report<br>
+  <span style="margin-left:24px">3.b.2. Manager report is returned to the manager<br>  
+  <span style="margin-left:24px">3.b.3. Use case progresses to step 4<br>
+  <span style="margin-left:12px">3.c. Manager requests the EFT report<br>
+  <span style="margin-left:24px">3.c.1. The EFT report is returned to the manager<br>
+  <span style="margin-left:24px">3.c.2. Use case progresses to step 4<br>
+  <span style="margin-left:12px">3.d. Manager requests a provider report<br>
+  <span style="margin-left:24px">3.d.1. Manager selects the desired provider's report<br>
+  <span style="margin-left:24px">3.d.2. Provider report is returned to the manager<br>  
+  <span style="margin-left:24px">3.d.3. Use case progresses to step 4<br>
+</p>
+
+</body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocAn Project 1</title>
+<!--table style-->
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #9e1b32;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: auto;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+table{
+  font-family: Times, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid Black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: LightGrey;
+}
+tr:nth-child(even) {
+  background-color: Azure;
+}
+tr:hover {background-color: LightBlue;}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <!--Home tab-->
+    <a href="../Report1.html">Project 1 - Requirements</a>
+    <!--Glossary Tab-->
+    <a href="Glossary.html">Glossary</a>
+    <!-- Use Case Tab-->
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Use Cases
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="UseCaseDiagram.html">Use Case Diagram</a>
+        <a href="UseCaseDescription.html">Use Case Description</a>
+    </div>
+    </div>
+    <!--Story Selection tab-->
+    <a href="StorySelectionMatrix.html">Story Selection Matrix</a> 
+    <!-- user story tab-->
+    <a href="GenericSecurityUserStories.html">Generic Security User Stories</a>
+    <!--Project 2-->
+    <a href="../../Project 2 Analysis/Report2.html">Project 2 - Analysis</a>
+    <!--Project 3-->
+    <a href="../../Project 3 Design/Report3.html">Project 3 - Design</a>
+    <!--Project 4-->
+    <a href="../../Project 4 Implementation and Testing/Report4.html">Project 4 - Implementation and Testing</a>
+
+  </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+</script>
+
+<h1 style="text-align:center">ChocAn Project 1 - Requirements</h1>
+<h2 style="text-align:center">Use Case Descriptions</h2>
+<hr color="#9e1b32">
+
+<!--Use Case 1-->
+<p>
+  <caption>
+    <h3> Request Provider Directory</h3>
+  </caption>    
+  <b>Use Case:</b> Request Provider Directory<br>
+  <b>Context:</b> The provider requests the provider directory to be sent as an attachment to their e-mail inbox<br>
+  <b>Actors:</b> Provider<br>
+  <b>Main Success Scenario:</b><br>
+  <span style="margin-left:12px">1. The provider requests the provider directory.<br>
+  <span style="margin-left:12px">2. The provider enters the e-mail address wwhere they want the directory sent.<br>
+  <span style="margin-left:12px">3. The provider directory is sent to the given e-mail address as an attachment.<br>
+  <span style="margin-left:12px">4. Use case is finished<br>
+  <b>Extensions: </b> N/A <br>
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 2-->
+<p>
+  <caption>
+    <h3> Bill ChocAn</h3>
+  </caption>
+  <b>Use Case:</b> Bill ChocAn<br>
+  <b>Context:</b> Provider is recording a service and billing ChocAn the proper amount<br>
+  <b>Actors:</b> Provider<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1. Provider enters login information<br>
+  <span style="margin-left:12px">2. Provider is verified through the ChocAn database<br>
+  <span style="margin-left:12px">3. Provider enters the member info to have it verified<br>
+  <span style="margin-left:12px">4. Provider records that the desired service was completed<br>
+  <span style="margin-left:24px">4.1. Optionally the Provider adds comments to the record<br>
+  <span style="margin-left:12px">5. The provider verifies that the fee for the service is correct<br>
+  <span style="margin-left:12px">6. The provider fills out their own personal record for data keeping purposes<br>
+  <span style="margin-left:12px">7. Use case is finished<br>
+  <b>Extensions:</b><br>
+  <span style="margin-left:12px">1.a. Invalid provider login<br>
+  <span style="margin-left:24px">1.a.1. System notifies the provider<br>
+  <span style="margin-left:24px">1.a.2. Use case returns to step 1<br>
+  <span style="margin-left:36px">1.a.2.a. After 3 invalid attempts, option to contact customer service is offered then proceed to step 7<br>
+  <span style="margin-left:12px">3.a. Invalid member information<br>
+  <span style="margin-left:12px">3.a.1 Use case returns to step 3<br>
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 3-->
+<p>
+  <caption>
+    <h3> Verify User</h3>
+  </caption>
+  <b>Use Case:</b> Verify User<br>
+  <b>Context:</b> A user is verified through the ChocAn System<br>
+  <b>Actors:</b> Provider, Manager, ChocAn Operator<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1. Provider logins in to provider system<br>
+  <span style="margin-left:12px">2. Inputs user info<br>
+  <span style="margin-left:12px">3. User is verified within the system<br>
+  <span style="margin-left:12px">4. <b>Validated</b> appears on the one-line display<br>
+  <span style="margin-left:12px">5. Use Case is finished<br>
+  <b>Extensions: </b><br>
+  <span style="margin-left:12px">1.a. Manger logins in to manager system<br>
+  <span style="margin-left:12px">1.b. ChocAn Operator logins in to operator system<br>
+  <span style="margin-left:12px">4`.a. <b>Invalid</b> appears on the one-line display<br>  
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 4-->
+<p>
+  <caption>
+    <h3> Validate Member</h3>
+  </caption>
+  <b>Use Case:</b> Validate Member<br>
+  <b>Context:</b> Provider validates a member's information to confirm they are part of ChocAn<br>
+  <b>Actors:</b> Provider<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1.	Software prompts provider to enter member information<br>
+  <span style="margin-left:12px">2.	Provider enters member's info or swipes the member's card<br>
+  <span style="margin-left:12px">3.	ChocAn returns whether or not the member is a part of ChocAn<br>
+  <span style="margin-left:12px">4. Use case is finished<br>
+  <b>Extensions: </b> N/A <br>
+</p>
+
+<hr color="#9e1b32" >
+
+<!--Use Case 5-->
+<p>
+  <caption>
+    <h3> Run Main Accounting Procedure</h3>
+  </caption>
+  <b>Use Case:</b> Run Main Accounting Procedure<br>
+  <b>Context:</b> The timer is automated to make and distribute reports on the end of Friday at midnight that detail the weeks activity<br>
+  <b>Actors:</b> Timer<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px">1. The timer is prompted when it becomes Midnight on Friday<br>
+  <span style="margin-left:12px">2. The reports are created<br>
+  <span style="margin-left:12px">3. The reports are sent out as email attachments<br>
+  <span style="margin-left:12px">4. Use case is finished<br>
+  <b>Extensions: </b><br>
+  <span style="margin-left:12px">2.a. Member report<br>
+  <span style="margin-left:24px">2.a.1. The system will look up each member who used a ChocAn provider during the last week<br>
+  <span style="margin-left:24px">2.a.2. For each member the system will access the member's name, street address, cirt, state, ZIP code, and their member number. The system will also find what services
+    each member was provided during the week and record the date of service, provider name, and service name<br>
+  <span style="margin-left:24px">2.a.3. Use case progresses to step 3<br>
+  <span style="margin-left:12px">2.b. Provider report<br>
+  <span style="margin-left:24px">2.b.1. The system looks up each provider who has billed ChocAn during the previous week<br>
+  <span style="margin-left:24px">2.b.2. For each provider who billed ChocAn, the system locates the provider's name, number, street address, city, state, and ZIP code. Then, for each service provided
+    the system will look up the date of service, the date and time the record of service was recieved by ChocAn, member name,
+  <span style="margin-left:64px"> member number, service code, and the fee to be paid<br>
+  <span style="margin-left:24px">2.b.3. The system totals the number of consultations for each provider during the week andthe total fee that needs to be paid to the provider (up to $99,999,999)<br>
+  <span style="margin-left:24px">2.b.4. Use case progresses to step 3<br>
+  <span style="margin-left:12px">2.c. Manager report<br>
+  <span style="margin-left:24px">2.c.1. The system looks up what providers have been used for the week<br>
+  <span style="margin-left:24px">2.c.2. For each provider, the system will find how many times each provider was used and the total fees owed to the provider<br>
+  <span style="margin-left:24px">2.c.3 The system records the total number of providers and the total number of consultations with members during that week<br>
+  <span style="margin-left:24px">2.c.4. Use case progresses to step 3<br>
+  <span style="margin-left:12px">2.d. EFT report<br>
+  <span style="margin-left:24px">2.d.1. A record of EFT data is written to a disk<br>
+  <span style="margin-left:24px">2.d.2 Use case progresses to step 3<br>
+
+</p>
+
+<hr color="#9e1b32">
+
+<!--Use Case 6-->
+<p>
+  <caption>
+    <h3> Modify Provider</h3>
+  </caption>
+  <b>Use Case:</b> Modify Provider<br>
+  <b>Context:</b> ChocAn Operator edits ChocAn provider status<br>
+  <b>Actors:</b> ChocAn Operator<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px"> 1. Operator logs into system<br>
+  <span style="margin-left:12px"> 2. Operator is shown Operator menu<br>
+  <span style="margin-left:12px"> 3. Operator selects to view records updated by ACME<br>
+  <span style="margin-left:12px"> 4. Operator edits provider database<br>
+  <span style="margin-left:12px"> 5. Use case is finished<br> 
+  <b>Extensions: </b> <br>
+  <span style="margin-left:12px">1.a. Invalid Operator Credentials<br>
+  <span style="margin-left:24px">1.a.1. System notifies user<br>
+  <span style="margin-left:24px">1.a.2. Use case returns to step 1<br>
+  <span style="margin-left:24px">1.a.3. After 5 failed attempts, use case progresses to step 6<br>
+  <span style="margin-left:12px">4.a. Operator adds a new provider<br>
+  <span style="margin-left:24px">4.a.1. Operator selects new provider option<br>
+  <span style="margin-left:24px">4.a.2. Operator inputs new provider's information to ChocAn database<br>
+  <span style="margin-left:24px">4.a.3 New provider is assigned an ID<br>
+  <span style="margin-left:24px">4.a.4 New provider account is created<br>
+  <span style="margin-left:24px">4.a.5 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.b. Operator removes a provider<br>
+  <span style="margin-left:24px">4.b.1. Operator selects remove provider option<br>
+  <span style="margin-left:24px">4.b.2. Operator deletes provider account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.c. Operator updates provider information<br>
+  <span style="margin-left:24px">4.c.1. Operator selects update provider option<br>
+  <span style="margin-left:24px">4.c.2. Operator updates provider account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+</p>
+<hr color="#9e1b32">
+
+<!--Use Case 7-->
+<p>
+  <caption>
+    <h3> Modify Member</h3>
+  </caption>
+  <b>Use Case:</b> Modify Member<br>
+  <b>Context:</b> ChocAn Operator edits ChocAn member status<br>
+  <b>Actors:</b> ChocAn Operator<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px"> 1. Operator logs into system<br>
+  <span style="margin-left:12px"> 2. Operator is shown Operator menu<br>
+  <span style="margin-left:12px"> 3. Operator selects to view records updated by ACME<br>
+  <span style="margin-left:12px"> 4. Operator edits member database<br>
+  <span style="margin-left:12px"> 5. Use case is finished<br> 
+  <b>Extensions: </b> <br>
+  <span style="margin-left:12px">1.a. Invalid Operator Credentials<br>
+  <span style="margin-left:24px">1.a.1. System notifies user<br>
+  <span style="margin-left:24px">1.a.2. Use case returns to step 1<br>
+  <span style="margin-left:24px">1.a.3. After 3 failed attempts, use case progresses to step 5<br>
+  <span style="margin-left:12px">4.a. Operator adds a new member<br>
+  <span style="margin-left:24px">4.a.1. Operator selects new member option<br>
+  <span style="margin-left:24px">4.a.2. Operator inputs new member information to ChocAn database<br>
+  <span style="margin-left:24px">4.a.3 New member is assigned an ID<br>
+  <span style="margin-left:24px">4.a.4 New member account is created<br>
+  <span style="margin-left:24px">4.a.5 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.b. Operator removes a member<br>
+  <span style="margin-left:24px">4.b.1. Operator selects remove member option<br>
+  <span style="margin-left:24px">4.b.2. Operator deletes member account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+  <span style="margin-left:12px">4.c. Operator updates member information<br>
+  <span style="margin-left:24px">4.c.1. Operator selects update member option<br>
+  <span style="margin-left:24px">4.c.2. Operator updates member account<br>
+  <span style="margin-left:24px">4.c.3 Use case returns to step 2<br>
+</p>
+<hr color="#9e1b32">
+
+<!--Use Case 8-->
+<p>
+  <caption>
+    <h3> Generate Individual Report</h3>
+  </caption>
+  <b>Use Case:</b> Generate Individual Report<br>
+  <b>Context:</b> At any time a manager can request an individual report of a service that was completed<br>
+  <b>Actors:</b> Manager<br>
+  <b>Main Success Scenario:</b> <br>
+  <span style="margin-left:12px"> 1. Manager logs into system<br>
+  <span style="margin-left:12px"> 2. Manager is shown report request menu<br>
+  <span style="margin-left:12px"> 3. Database fetches report and returns it to the manager<br>
+  <span style="margin-left:12px"> 4. Use case is finished<br>
+  <b>Extensions: </b> <br>
+  <span style="margin-left:12px">1.a. Invalid Manager Credentials<br>
+  <span style="margin-left:24px">1.a.1. System notifies user<br>
+  <span style="margin-left:24px">1.a.2 Use case return to step 1<br>
+  <span style="margin-left:24px">1.a.3 After 3 failed attemps, use case progresses to step 4<br>
+  <span style="margin-left:12px">3.a. Manager requests a member report<br>
+  <span style="margin-left:24px">3.a.1. Manager selects the desired member's report<br>
+  <span style="margin-left:24px">3.a.2. Member report is returned to the manager<br>  
+  <span style="margin-left:24px">3.a.3. Use case progresses to step 4<br>
+  <span style="margin-left:12px">3.b. Manager requests a manager report<br>
+  <span style="margin-left:24px">3.b.1. Manager selects the desired manager's report<br>
+  <span style="margin-left:24px">3.b.2. Manager report is returned to the manager<br>  
+  <span style="margin-left:24px">3.b.3. Use case progresses to step 4<br>
+  <span style="margin-left:12px">3.c. Manager requests the EFT report<br>
+  <span style="margin-left:24px">3.c.1. The EFT report is returned to the manager<br>
+  <span style="margin-left:24px">3.c.2. Use case progresses to step 4<br>
+  <span style="margin-left:12px">3.d. Manager requests a provider report<br>
+  <span style="margin-left:24px">3.d.1. Manager selects the desired provider's report<br>
+  <span style="margin-left:24px">3.d.2. Provider report is returned to the manager<br>  
+  <span style="margin-left:24px">3.d.3. Use case progresses to step 4<br>
+</p>
+
+</body>
+>>>>>>> branch 'master' of https://gdhakal@bitbucket.org/tklocklear/fall2023team4.git
+</html>

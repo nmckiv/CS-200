@@ -1,0 +1,466 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocAn Project 1</title>
+<!--table style-->
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #9e1b32;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: auto;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+table{
+  font-family: Times, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid Black;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  background-color: #9e1b32;
+}
+
+tr:nth-child(odd) {
+  background-color: White;
+  
+}
+tr:nth-child(even) {
+  background-color: #828a8f;
+  
+}
+tr:hover {background-color: LightBlue;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <!--Home tab-->
+    <a href="../Report1.html">Project 1 - Requirements</a>
+    <!--Glossary Tab-->
+    <a href="Glossary.html">Glossary</a>
+    <!-- Use Case Tab-->
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Use Cases
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="UseCaseDiagram.html">Use Case Diagram</a>
+        <a href="UseCaseDescription.html">Use Case Description</a>
+    </div>
+    </div>
+    <!--Story Selection tab-->
+    <a href="StorySelectionMatrix.html">Story Selection Matrix</a> 
+    <!-- user story tab-->
+    <a href="GenericSecurityUserStories.html">Generic Security User Stories</a>
+    <!--Project 2-->
+    <a href="../../Project 2 Analysis/Report2.html">Project 2 - Analysis</a>
+    <!--Project 3-->
+    <a href="../../Project 3 Design/Report3.html">Project 3 - Design</a>
+    <!--Project 4-->
+    <a href="../../Project 4 Implementation and Testing/Report4.html">Project 4 - Implementation and Testing</a>
+
+  </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+</script>
+
+<h1 style="text-align:center">ChocAn Project 1 - Requirements</h1>
+<h2 style="text-align:center">Generic Security User Stories</h2>
+
+<table class="center">
+    <caption>
+      <h3>User Story 1</h3>
+    </caption>
+    <tr>
+        <th>As</th>
+        <th>An Information Security Manager</th>
+    </tr>
+    <tr>
+        <td>I want</td>
+        <td>That it is clearly defined which user account are authorized for which activities</td>
+    </tr>
+    <tr>
+        <td>So that</td>
+        <td>The effectiveness and correctness of access controls can be checked</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>it should be clear what different user accounts within ChocAn can do. The ChocAn 
+            manager and the ChocAn operator should have access to different levels of 
+            information within the ChocAn system. This is important for protecting the 
+            information of the Providers and members of the ChocAn system.
+        </td>
+    </tr>
+    <tr>
+        <td>Acceptance Criteria</td>
+        <td>Access control policy exists in design and is provided for maintenance.</td>
+    </tr>
+    <tr>
+        <td>Refinement Questions</td>
+        <td>What sort of user roles should we have?<br>
+            Can user be multiple roles at once?<br>
+            Can a policy conflict between someone who has multiple roles?<br>
+            IS there a permission model in the system that can be mapped to these user types of roles, and if so, what is this mapping?
+        </td>
+    </tr>
+</table>
+
+<table class="center">
+    <caption>
+      <h3>User Story 2</h3>
+    </caption>
+    <tr>
+        <th>As</th>
+        <th>A User</th>
+    </tr>
+    <tr>
+        <td>I want</td>
+        <td>The ChocAn system to be available when needed</td>
+    </tr>
+    <tr>
+        <td>So that</td>
+        <td>I get the expected value out of it</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>Availability is about the application being available for use when required. The 
+            application development needs to consider both random faults and intentional 
+            attacks. Reasonable effort needs to be taken to ensure availability in both cases. 
+            Fault sources include, for example, hardware failures, power and communication 
+            outages, and bugs. Intentional attacks typically taget capacity (network, memory, 
+            storage, CPU time) or logical flaws (deadlocks, livelocks). Intentional attacks actively 
+            try to exploit worst-case scenarios.
+        </td>
+    </tr>
+    <tr>
+        <td>Acceptance Criteria</td>
+        <td>tests exist that introduce synthetic failures that simulate availability problems</td>
+    </tr>
+    <tr>
+        <td>Refinement Questions</td>
+        <td>What are out availability requirements?<br>
+            What types of failures, attack or attackers could cause availability problems?<br>
+            Does out architecture have points that are especially susceptible to denial of service 
+            attacks?<br>
+        </td>
+    </tr>
+</table>
+</body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocAn Project 1</title>
+<!--table style-->
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #9e1b32;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: auto;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+table{
+  font-family: Times, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid Black;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  background-color: #9e1b32;
+}
+
+tr:nth-child(odd) {
+  background-color: White;
+  
+}
+tr:nth-child(even) {
+  background-color: #828a8f;
+  
+}
+tr:hover {background-color: LightBlue;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <!--Home tab-->
+    <a href="../Report1.html">Project 1 - Requirements</a>
+    <!--Glossary Tab-->
+    <a href="Glossary.html">Glossary</a>
+    <!-- Use Case Tab-->
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Use Cases
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="UseCaseDiagram.html">Use Case Diagram</a>
+        <a href="UseCaseDescription.html">Use Case Description</a>
+    </div>
+    </div>
+    <!--Story Selection tab-->
+    <a href="StorySelectionMatrix.html">Story Selection Matrix</a> 
+    <!-- user story tab-->
+    <a href="GenericSecurityUserStories.html">Generic Security User Stories</a>
+    <!--Project 2-->
+    <a href="../../Project 2 Analysis/Report2.html">Project 2 - Analysis</a>
+    <!--Project 3-->
+    <a href="../../Project 3 Design/Report3.html">Project 3 - Design</a>
+    <!--Project 4-->
+    <a href="../../Project 4 Implementation and Testing/Report4.html">Project 4 - Implementation and Testing</a>
+
+  </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+</script>
+
+<h1 style="text-align:center">ChocAn Project 1 - Requirements</h1>
+<h2 style="text-align:center">Generic Security User Stories</h2>
+
+<table class="center">
+    <caption>
+      <h3>User Story 1</h3>
+    </caption>
+    <tr>
+        <th>As</th>
+        <th>An Information Security Manager</th>
+    </tr>
+    <tr>
+        <td>I want</td>
+        <td>That it is clearly defined which user account are authorized for which activities</td>
+    </tr>
+    <tr>
+        <td>So that</td>
+        <td>The effectiveness and correctness of access controls can be checked</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>it should be clear what different user accounts within ChocAn can do. The ChocAn 
+            manager and the ChocAn operator should have access to different levels of 
+            information within the ChocAn system. This is important for protecting the 
+            information of the Providers and members of the ChocAn system.
+        </td>
+    </tr>
+    <tr>
+        <td>Acceptance Criteria</td>
+        <td>Access control policy exists in design and is provided for maintenance.</td>
+    </tr>
+    <tr>
+        <td>Refinement Questions</td>
+        <td>What sort of user roles should we have?<br>
+            Can user be multiple roles at once?<br>
+            Can a policy conflict between someone who has multiple roles?<br>
+            IS there a permission model in the system that can be mapped to these user types of roles, and if so, what is this mapping?
+        </td>
+    </tr>
+</table>
+
+<table class="center">
+    <caption>
+      <h3>User Story 2</h3>
+    </caption>
+    <tr>
+        <th>As</th>
+        <th>A User</th>
+    </tr>
+    <tr>
+        <td>I want</td>
+        <td>The ChocAn system to be available when needed</td>
+    </tr>
+    <tr>
+        <td>So that</td>
+        <td>I get the expected value out of it</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>Availability is about the application being available for use when required. The 
+            application development needs to consider both random faults and intentional 
+            attacks. Reasonable effort needs to be taken to ensure availability in both cases. 
+            Fault sources include, for example, hardware failures, power and communication 
+            outages, and bugs. Intentional attacks typically taget capacity (network, memory, 
+            storage, CPU time) or logical flaws (deadlocks, livelocks). Intentional attacks actively 
+            try to exploit worst-case scenarios.
+        </td>
+    </tr>
+    <tr>
+        <td>Acceptance Criteria</td>
+        <td>tests exist that introduce synthetic failures that simulate availability problems</td>
+    </tr>
+    <tr>
+        <td>Refinement Questions</td>
+        <td>What are out availability requirements?<br>
+            What types of failures, attack or attackers could cause availability problems?<br>
+            Does out architecture have points that are especially susceptible to denial of service 
+            attacks?<br>
+        </td>
+    </tr>
+</table>
+</body>
+>>>>>>> branch 'master' of https://gdhakal@bitbucket.org/tklocklear/fall2023team4.git
+</html>

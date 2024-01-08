@@ -1,0 +1,392 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocAn Project 1</title>
+<!--table style-->
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #9e1b32;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: auto;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+table{
+  font-family: Times, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid Black;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  background-color: #9e1b32;
+}
+
+tr:nth-child(odd) {
+  background-color: White;
+  
+}
+tr:nth-child(even) {
+  background-color: #828a8f;
+  
+}
+tr:hover {background-color: LightBlue;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <!--Home tab-->
+    <a href="../Report1.html">Project 1 - Requirements</a>
+    <!--Glossary Tab-->
+    <a href="Glossary.html">Glossary</a>
+    <!-- Use Case Tab-->
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Use Cases
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="UseCaseDiagram.html">Use Case Diagram</a>
+        <a href="UseCaseDescription.html">Use Case Description</a>
+    </div>
+    </div>
+    <!--Story Selection tab-->
+    <a href="StorySelectionMatrix.html">Story Selection Matrix</a> 
+    <!-- user story tab-->
+    <a href="GenericSecurityUserStories.html">Generic Security User Stories</a>
+    <!--Project 2-->
+    <a href="../../Project 2 Analysis/Report2.html">Project 2 - Analysis</a>
+    <!--Project 3-->
+    <a href="../../Project 3 Design/Report3.html">Project 3 - Design</a>
+    <!--Project 4-->
+    <a href="../../Project 4 Implementation and Testing/Report4.html">Project 4 - Implementation and Testing</a>
+
+  </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+</script>
+
+<h1 style="text-align:center">ChocAn Project 1 - Requirements</h1>
+<h2 style="text-align:center">Story Selection Matrix</h2>
+
+<table class="center">
+
+    <tr>
+      <th>prompt</th>
+      <th>Response</th>
+    </tr>
+    <tr>
+        <td>Do you process information about a user?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Do you have data that belongs to or is created by a user?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Do you have a concept of a "user account"?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Do you offer a "service"?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Is your system a "product" that has a "customer"?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Do you have different user accounts for different reasons?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Do you interface with any other system (locally or remotely)?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Do you transfer information over a network?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Is a part of your system "hosted" or "in a cloud"?</td>
+        <td>Yes</td>
+    </tr>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChocAn Project 1</title>
+<!--table style-->
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #9e1b32;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: auto;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+table{
+  font-family: Times, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid Black;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  background-color: #9e1b32;
+}
+
+tr:nth-child(odd) {
+  background-color: White;
+  
+}
+tr:nth-child(even) {
+  background-color: #828a8f;
+  
+}
+tr:hover {background-color: LightBlue;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <!--Home tab-->
+    <a href="../Report1.html">Project 1 - Requirements</a>
+    <!--Glossary Tab-->
+    <a href="Glossary.html">Glossary</a>
+    <!-- Use Case Tab-->
+    <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Use Cases
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="UseCaseDiagram.html">Use Case Diagram</a>
+        <a href="UseCaseDescription.html">Use Case Description</a>
+    </div>
+    </div>
+    <!--Story Selection tab-->
+    <a href="StorySelectionMatrix.html">Story Selection Matrix</a> 
+    <!-- user story tab-->
+    <a href="GenericSecurityUserStories.html">Generic Security User Stories</a>
+    <!--Project 2-->
+    <a href="../../Project 2 Analysis/Report2.html">Project 2 - Analysis</a>
+    <!--Project 3-->
+    <a href="../../Project 3 Design/Report3.html">Project 3 - Design</a>
+    <!--Project 4-->
+    <a href="../../Project 4 Implementation and Testing/Report4.html">Project 4 - Implementation and Testing</a>
+
+  </div>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+</script>
+
+<h1 style="text-align:center">ChocAn Project 1 - Requirements</h1>
+<h2 style="text-align:center">Story Selection Matrix</h2>
+
+<table class="center">
+
+    <tr>
+      <th>prompt</th>
+      <th>Response</th>
+    </tr>
+    <tr>
+        <td>Do you process information about a user?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Do you have data that belongs to or is created by a user?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Do you have a concept of a "user account"?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Do you offer a "service"?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Is your system a "product" that has a "customer"?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Do you have different user accounts for different reasons?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Do you interface with any other system (locally or remotely)?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Do you transfer information over a network?</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Is a part of your system "hosted" or "in a cloud"?</td>
+        <td>Yes</td>
+    </tr>
+>>>>>>> branch 'master' of https://gdhakal@bitbucket.org/tklocklear/fall2023team4.git
+</table>

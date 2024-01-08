@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #828A8F;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Software.Controller">
+	<top>
+		<AnchorPane prefHeight="83.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fitHeight="84.0" fitWidth="89.0" layoutY="-6.0" onMouseClicked="#backToLogIn" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../images/ChocAnLogo_inPixio.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="61.0" layoutY="46.0" style="-fx-background-color: #949A9F;" />
+				<ImageView fx:id="exitOperator" fitHeight="37.0" fitWidth="35.0" layoutX="551.0" layoutY="24.0" onMouseClicked="#closeProgram" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../images/ExitBtn_inPixio.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="96.0" layoutY="14.0" prefHeight="56.0" prefWidth="288.0" text="Operator Menu" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="36.0" />
+					</font>
+				</Label>
+				<Button layoutX="440.0" layoutY="27.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #828A8F;" text="Log Out" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+			</children>
+		</AnchorPane>
+	</top>
+	<center>
+		<AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../images/Alabama_Crimson_Tide_logo.svg.png" />
+					</image>
+				</ImageView>
+				<Button layoutX="386.0" layoutY="184.0" mnemonicParsing="false" onAction="#remove" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #828A8F;" text="Remove" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button fx:id="addBtn" layoutX="386.0" layoutY="144.0" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #828A8F;" text="Add" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button fx:id="NickSabanRules" layoutX="386.0" layoutY="224.0" mnemonicParsing="false" onAction="#modify" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #828A8F;" text="Edit" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Button>
+				<Label layoutX="361.0" layoutY="102.0" text="Select Function" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Label>
+				<Button fx:id="databaseBtn" layoutX="336.0" layoutY="48.0" mnemonicParsing="false" onAction="#swapDatabase" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #828A8F;" text="Provider Database" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Button>
+				<DialogPane fx:id="addProviderDialog" headerText="Add Provider" layoutX="120.0" layoutY="14.0" prefWidth="360.0" visible="false">
+					<header>
+						<BorderPane prefHeight="200.0" prefWidth="200.0">
+							<center>
+								<AnchorPane prefHeight="367.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+									<children>
+										<Button fx:id="provAddBtn" layoutX="90.0" layoutY="155.0" mnemonicParsing="false" onAction="#addProvider" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #828A8F;" text="Add Provider" textFill="#9e1b32">
+											<font>
+												<Font name="System Bold" size="18.0" />
+											</font>
+										</Button>
+										<TextField fx:id="provNameTxt" layoutX="159.0" layoutY="2.0" prefHeight="25.0" prefWidth="119.0" />
+										<Label layoutX="51.0" layoutY="1.0" text="Name:" textFill="#9e1b32">
+											<font>
+												<Font name="System Bold" size="18.0" />
+											</font>
+										</Label>
+										<Label layoutX="54.0" layoutY="31.0" text="Address:" textFill="#9e1b32">
+											<font>
+												<Font name="System Bold" size="18.0" />
+											</font>
+										</Label>
+										<Label layoutX="54.0" layoutY="61.0" text="City:" textFill="#9e1b32">
+											<font>
+												<Font name="System Bold" size="18.0" />
+											</font>
+										</Label>
+										<Label layoutX="54.0" layoutY="121.0" text="Zip:" textFill="#9e1b32">
+											<font>
+												<Font name="System Bold" size="18.0" />
+											</font>
+										</Label>
+										<Label layoutX="54.0" layoutY="91.0" text="State:" textFill="#9e1b32">
+											<font>
+												<Font name="System Bold" size="18.0" />
+											</font>
+										</Label>
+										<TextField fx:id="provAddressTxt" layoutX="159.0" layoutY="32.0" prefHeight="25.0" prefWidth="119.0" />
+										<TextField fx:id="provCityTxt" layoutX="159.0" layoutY="62.0" prefHeight="25.0" prefWidth="119.0" />
+										<TextField fx:id="provStateTxt" layoutX="159.0" layoutY="92.0" prefHeight="25.0" prefWidth="119.0" />
+										<TextField fx:id="provZipTxt" layoutX="159.0" layoutY="125.0" prefHeight="25.0" prefWidth="119.0" />
+									</children>
+								</AnchorPane>
+							</center>
+						</BorderPane>
+					</header>
+				</DialogPane>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>

@@ -1,0 +1,105 @@
+================================
+Service: Aerobics Class (30 Minutes)
+Service Code: 100000
+Price: 25.0
+================================
+================================
+Service: Aerobics Class (60 Minutes)
+Service Code: 100001
+Price: 50.0
+================================
+================================
+Service: Bike Rental
+Service Code: 100002
+Price: 20.0
+================================
+================================
+Service: Boxing Lesson
+Service Code: 100003
+Price: 50.0
+================================
+================================
+Service: Cross Fit Session
+Service Code: 100004
+Price: 50.0
+================================
+================================
+Service: Dance Lesson
+Service Code: 100005
+Price: 50.0
+================================
+================================
+Service: Dentist Appointment
+Service Code: 100006
+Price: 100.0
+================================
+================================
+Service: Diet Consultation
+Service Code: 100007
+Price: 50.0
+================================
+================================
+Service: Doctor Appointment
+Service Code: 100008
+Price: 175.0
+================================
+================================
+Service: Gym Session
+Service Code: 100009
+Price: 50.0
+================================
+================================
+Service: Jazzercise Class (30 Minutes)
+Service Code: 100010
+Price: 25.0
+================================
+================================
+Service: Jazzercise Class (60 Minutes)
+Service Code: 100011
+Price: 50.0
+================================
+================================
+Service: Mixed Martial Arts Lesson
+Service Code: 100012
+Price: 50.0
+================================
+================================
+Service: Nutritionist appointment
+Service Code: 100013
+Price: 100.0
+================================
+================================
+Service: Physical
+Service Code: 100014
+Price: 150.0
+================================
+================================
+Service: Pilates Class (30 Minutes)
+Service Code: 100015
+Price: 25.0
+================================
+================================
+Service: Pilates Class (60 Minutes
+Service Code: 100016
+Price: 50.0
+================================
+================================
+Service: Yoga Class (30 Minutes)
+Service Code: 100017
+Price: 25.0
+================================
+================================
+Service: Yoga Class (60 Minutes)
+Service Code: 100018
+Price: 50.0
+================================
+================================
+Service: Zumba Class (30 Minutes)
+Service Code: 100019
+Price: 25.0
+================================
+================================
+Service: Zumba Class (60 Minutes)
+Service Code: 100020
+Price: 50.0
+================================

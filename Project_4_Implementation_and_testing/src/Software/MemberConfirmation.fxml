@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="544.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="483.0" style="-fx-background-color: #828A8F;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Software.Controller">
+	<top>
+		<AnchorPane prefHeight="83.0" prefWidth="420.0" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fitHeight="84.0" fitWidth="87.0" layoutY="-6.0" onMouseClicked="#backToLogIn" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../images/ChocAnLogo_inPixio.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="61.0" layoutY="46.0" style="-fx-background-color: #949A9F;" />
+				<Button layoutX="413.0" layoutY="11.0" mnemonicParsing="false" onAction="#lastPane" prefHeight="51.0" prefWidth="67.0" style="-fx-background-color: #828a8F;" text="Back" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Button>
+				<Label layoutX="90.0" layoutY="8.0" prefHeight="56.0" prefWidth="303.0" text="Correct Member?" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="36.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+	</top>
+	<center>
+		<AnchorPane prefHeight="457.0" prefWidth="498.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+			<children>
+				<Button layoutX="147.0" layoutY="168.0" mnemonicParsing="false" onAction="#correctMember" prefHeight="50.0" prefWidth="75.0" style="-fx-background-color: #828a8F;" text="Yes" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Button>
+				<Label layoutX="87.0" layoutY="15.0" prefHeight="35.0" prefWidth="82.0" text="Name: " textAlignment="RIGHT" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Label layoutX="60.0" layoutY="65.0" prefWidth="100.0" text="Number:" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Label layoutX="80.0" layoutY="115.0" prefHeight="35.0" prefWidth="83.0" text="Status:" textAlignment="RIGHT" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Button layoutX="262.0" layoutY="168.0" mnemonicParsing="false" onAction="#lastPane" prefHeight="50.0" prefWidth="75.0" style="-fx-background-color: #828a8F;" text="No" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Button>
+				<Label fx:id="correctMembNameLbl" layoutX="181.0" layoutY="15.0" prefHeight="35.0" prefWidth="261.0" textAlignment="RIGHT" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Label fx:id="correctMembNumberLbl" layoutX="181.0" layoutY="65.0" prefHeight="35.0" prefWidth="265.0" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Label fx:id="correctMembStatusLbl" layoutX="181.0" layoutY="115.0" prefHeight="35.0" prefWidth="266.0" textAlignment="RIGHT" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Button fx:id="loadMembInfoBtn" layoutX="204.0" layoutY="57.0" mnemonicParsing="false" onAction="#loadMembInfo" prefHeight="51.0" prefWidth="236.0" style="-fx-background-color: #828a8F;" text="Load Information" textFill="#9e1b32">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Button>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>

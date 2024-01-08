@@ -1,0 +1,145 @@
+==========================================================Main Accounting Procedure==========================================================
+================================================Member Reports================================================
+
+======================================Begin Member Report: Pearson Hunter======================================
+Member Name: Pearson Hunter
+Member Number: 000000000
+Member Street Address: 1st Street
+Member City: Memphis
+Member State: TN
+Member ZIP code: 38017
+---------------------Services Recieved---------------------
+Date: 12-03-2023
+Provider: Ben Haas
+Service Name: Aerobics Class (60 Minutes)
+
+Date: 12-05-2023
+Provider: Nolan McKivergan
+Service Name: Aerobics Class (30 Minutes)
+
+======================================End Member Report: Pearson Hunter ======================================
+
+======================================Begin Member Report: John Byrd======================================
+Member Name: John Byrd
+Member Number: 000000001
+Member Street Address: Main Street
+Member City: Birmingham
+Member State: AL
+Member ZIP code: 12345
+---------------------Services Recieved---------------------
+Date: 12-03-2023
+Provider: Ben Haas
+Service Name: Cross Fit Session
+
+Date: 12-05-2023
+Provider: Nolan McKivergan
+Service Name: Cross Fit Session
+
+======================================End Member Report: John Byrd ======================================
+
+======================================Begin Member Report: Rowan Romanauskus======================================
+Member Name: Rowan Romanauskus
+Member Number: 000000002
+Member Street Address: 22nd Street
+Member City: Huntsville
+Member State: AL
+Member ZIP code: 13347
+---------------------Services Recieved---------------------
+Date: 12-03-2023
+Provider: Ben Haas
+Service Name: Dentist Appointment
+
+Date: 12-05-2023
+Provider: Nolan McKivergan
+Service Name: Diet Consultation
+
+======================================End Member Report: Rowan Romanauskus ======================================
+
+================================================End Member Reports================================================
+
+
+================================================Provider Reports================================================
+
+======================================Begin Provider Report: Ben Haas======================================
+Provider Name: Ben Haas
+Provider Number: 000000000 
+Provider Street Address: 4th Street
+Provider City: New York
+Provider State: Alabama
+Provider ZIP Code: 05426
+---------------------Services Given---------------------
+Date of Service: 12-03-2023
+Date and Time data were recieved: 12-09-2023 16:29
+Member Name: Pearson Hunter
+Service Code: 100001
+Fee to be paid: 50.0
+
+Date of Service: 12-03-2023
+Date and Time data were recieved: 12-09-2023 16:30
+Member Name: John Byrd
+Service Code: 100004
+Fee to be paid: 50.0
+
+Date of Service: 12-03-2023
+Date and Time data were recieved: 12-09-2023 16:31
+Member Name: Rowan Romanauskus
+Service Code: 100006
+Fee to be paid: 100.0
+
+---------------------Totals---------------------
+Total Consultations: 3
+Total fees: 200.0
+======================================End Provider Report: Ben Haas======================================
+
+======================================Begin Provider Report: Nolan McKivergan======================================
+Provider Name: Nolan McKivergan
+Provider Number: 000000001 
+Provider Street Address: 198542nd Street
+Provider City: CityState
+Provider State: Alaska
+Provider ZIP Code: 24821
+---------------------Services Given---------------------
+Date of Service: 12-05-2023
+Date and Time data were recieved: 12-09-2023 16:29
+Member Name: Pearson Hunter
+Service Code: 100000
+Fee to be paid: 25.0
+
+Date of Service: 12-05-2023
+Date and Time data were recieved: 12-09-2023 16:31
+Member Name: John Byrd
+Service Code: 100004
+Fee to be paid: 50.0
+
+Date of Service: 12-05-2023
+Date and Time data were recieved: 12-09-2023 16:31
+Member Name: Rowan Romanauskus
+Service Code: 100007
+Fee to be paid: 50.0
+
+---------------------Totals---------------------
+Total Consultations: 3
+Total fees: 125.0
+======================================End Provider Report: Nolan McKivergan======================================
+
+================================================End Provider Reports================================================
+
+
+================================================Manager Report================================================
+
+Provider: Ben Haas
+Provider Consultations: 3
+Provider Fee: 200.0
+
+Provider: Nolan McKivergan
+Provider Consultations: 3
+Provider Fee: 125.0
+
+---------------------Totals---------------------
+
+Total providers who provided services: 2
+Total Consultations: 6
+Total Fee: 325.0
+================================================End Report================================================
+
+==========================================================Main Accounting Procedure Complete==========================================================

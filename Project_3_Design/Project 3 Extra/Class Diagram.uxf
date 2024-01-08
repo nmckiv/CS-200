@@ -1,0 +1,180 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>496</x><y>56</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Login Menu
+--
+
+--
++ prompt(): void
++ select(option: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>664</x><y>56</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Main Menu
+--
+
+--
++ prompt(): void
++ select(option: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>328</y><w>160</w><h>72</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+Generate Reports
+--
+
+--
++generateReport(report: int): void
++getReport(report: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>272</x><y>464</y><w>160</w><h>72</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Reports
+--
++ Report: list
+--
++ displayReport(report: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>472</x><y>584</y><w>88</w><h>64</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+EFT Report
+--
++ EFTData: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>328</x><y>584</y><w>136</w><h>136</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Manager  Report
+--
++ ProvidersOwed: String
++ ProviderConsultations: Int
++ IndividualProviderFee: Int
++ TotalConsultations: String
++ TotalProviders: String
++ TotalFee: Int
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>192</x><y>584</y><w>128</w><h>136</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Member Report
+--
++ MemberName: String
++ MemberNumber: String
++ MemberAddress: String
++ MemberCity: String
++ MemberState: String
++ MemberZIP: String
++ Service: list
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>48</x><y>584</y><w>136</w><h>224</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Provider Report
+--
++ ProviderName: String
++ ProviderNum: String
++ ProviderAddress: String
++ ProviderCity: String
++ ProviderState: String
++ ProviderZIP: String
++ ServiceDate: String
++ RecievedDate: String
++ MemberName: String
++ ServiceCode: String
++ ServiceFee: String
++ TotalConsultations: String
++ TotalFee: String
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>584</x><y>336</y><w>128</w><h>88</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+Modify Provider Database
+--
+
+--
++ addProvider(): void
++ editProvider(): void
++ removeProvider(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>744</x><y>336</y><w>128</w><h>88</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+Modify Member Database
+--
+
+--
++ addMember(): void
++ editMember(): void
++ removeMember(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>568</x><y>480</y><w>128</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Provider Database
+--
++ ProviderName: String
++ ProviderNum: String
++ ProviderAddress: String
++ ProviderCity: String
++ ProviderState: String
++ ProviderZIP: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>736</x><y>480</y><w>128</w><h>128</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Member Database
+--
++ MemberName: String
++ MemberNumber: String
++ MemberAddress: String
++ MemberCity: String
++ MemberState: String
++ MemberZIP: String
++ MemberStatus: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>328</y><w>120</w><h>72</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+Provider Controller
+--
+
+--
++ recordService(): void
++ verifyMember(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1016</x><y>456</y><w>128</w><h>136</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Service Record
+--
++ CurrentDate: String
++ ServiceDate: String
++ ProviderNum: String
++ MemberNum: String
++ ServiceCode: String
++ Comments: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>872</x><y>456</y><w>120</w><h>128</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Provider Directory
+--
++ serviceCode: Int
++ serviceName: String
++ serviceFee: Int
+--
++ generateTextFile(): void
++ displayService(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>688</x><y>512</y><w>432</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2= 1</panel_attributes><additional_attributes>510;100;510;250;40;250;40;10;60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>608</x><y>96</y><w>72</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+m1= 1
+m2=1</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>152</y><w>32</w><h>56</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>264</y><w>112</w><h>88</h></coordinates><panel_attributes>lt=&lt;-
+m2=1
+m1=1</panel_attributes><additional_attributes>10;90;10;60;110;60;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>416</y><w>32</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2= 1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>416</y><w>32</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2= 1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>472</x><y>128</y><w>280</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1= 1
+m2= 1</panel_attributes><additional_attributes>10;80;10;40;320;40;320;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>128</y><w>288</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>330;80;330;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>976</x><y>264</y><w>32</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m2=1
+m1=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>912</x><y>416</y><w>88</w><h>56</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>10;50;10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>976</x><y>392</y><w>112</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m2=1
+m1=1</panel_attributes><additional_attributes>110;80;110;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>344</x><y>392</y><w>120</w><h>88</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+m2=1</panel_attributes><additional_attributes>10;90;10;60;120;60;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>472</x><y>264</y><w>32</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>912</x><y>576</y><w>160</w><h>136</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>170;20;170;150;10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>104</x><y>528</y><w>432</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>310;10;310;40;380;40;380;70;380;40;520;40;520;70;520;40;200;40;200;70;200;40;10;40;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>56</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+Verify User
+--
+- username: String
+- password: String
+--
++ verifyUser() : Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>424</x><y>96</y><w>88</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>424</x><y>192</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Manager Menu
+--
+
+--
++ prompt(): void
++ select(option: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>672</x><y>192</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Operator Menu
+--
+
+--
++ prompt(): void
++ select(option: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>192</y><w>120</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Boundary&gt;&gt;
+Provider Menu
+--
+
+--
++ prompt(): void
++ select(option: int): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>264</y><w>120</w><h>88</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>120;90;120;60;10;60;10;10</additional_attributes></element></diagram>
